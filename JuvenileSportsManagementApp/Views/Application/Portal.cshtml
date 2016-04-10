@@ -1,0 +1,68 @@
+﻿@using JuvenileSportsManagementApp.Models
+
+@{
+    ViewBag.Title = "Athletics Management - Main Menu";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <div class="row" align="center">
+        <h2>
+            Athletics Management - Main Menu
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    Athletes Portal
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Athletes", "AthletesIndex", "Athletes", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    Events Portal
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Events", "EventsIndex", "Events", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    Results Portal
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Results", "ResultsIndex", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    Groups Portal
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Groups", "Groups", "Groups", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

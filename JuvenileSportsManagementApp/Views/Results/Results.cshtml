@@ -1,0 +1,80 @@
+﻿@model List<JuvenileSportsManagementApp.Models.ResultVM>
+
+@{
+    ViewBag.Title = "Athletics Management Portal - Results";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <h2>Results</h2>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].ResultID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].AthleteID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].AthleteName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].EventName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].Result)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].DateOfResult)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => m.ResultID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => m.AthleteID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => m.AthleteName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => m.EventName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => m.Result)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => m.DateOfResult)
+                        @Html.HiddenFor(model => m.IsDeleted)
+                        @Html.HiddenFor(model => m.EventID)
+                        @Html.HiddenFor(model => m.ResultID)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { resultID = m.ResultID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                        @Html.ActionLink("Details", "Details", new { resultID = m.ResultID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                        @Html.ActionLink("Delete", "Delete", new { resultID = m.ResultID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>
+        @Html.ActionLink("Create New Result", "Create", "Results", htmlAttributes: new { @class = "btn btn-success" })
+        @Html.ActionLink("Return to Results Index", "ResultsIndex", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+    </p>
+</body>
+</html>

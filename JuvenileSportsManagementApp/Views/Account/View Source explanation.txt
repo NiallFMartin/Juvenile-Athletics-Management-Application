@@ -1,0 +1,2 @@
+﻿All Views to do with accounts (ie. views in JuvenileSportsManagementApp/Views/Accounts were automatically created when 
+I created the base ASP.NET MVC project.

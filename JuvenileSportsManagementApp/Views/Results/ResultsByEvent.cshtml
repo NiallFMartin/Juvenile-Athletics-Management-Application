@@ -1,0 +1,45 @@
+﻿@model List<JuvenileSportsManagementApp.Models.EventVM>
+
+
+@{
+    ViewBag.Title = "Athletics Management Portal - Results By Group";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <h2>Athletes</h2>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Group
+                </th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => m.EventName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("View Results", "EventResults", "Results", new { ID = m.EventID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

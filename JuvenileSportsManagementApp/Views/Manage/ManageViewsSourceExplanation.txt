@@ -1,0 +1,2 @@
+﻿All the views in JuvenileSportsManagementApp/Views/Manage were automatically generated when I created the ASP.NET MVC project.
+I decided to use them to implement the account system easily and quickly.

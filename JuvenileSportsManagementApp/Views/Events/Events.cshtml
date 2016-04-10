@@ -1,0 +1,58 @@
+﻿@model List <JuvenileSportsManagementApp.Models.EventVM>
+
+@{
+    ViewBag.Title = "Athletics Management Portal - Events";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <h2>Events</h2>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].EventID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].EventName)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => m.EventID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => m.EventName)
+                        @Html.HiddenFor(model => m.IsDeleted)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { eventID = m.EventID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                        @Html.ActionLink("View Event Results", "EventResults", "Results", new { ID = m.EventID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td>
+                    @Html.ActionLink("Create New Event", "Create", "Events", htmlAttributes: new { @class = "btn btn-success" })
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

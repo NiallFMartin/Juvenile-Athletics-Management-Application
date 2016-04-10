@@ -1,0 +1,93 @@
+﻿@using JuvenileSportsManagementApp.Models
+
+@{
+    ViewBag.Title = "Athletics Management - Events";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <div class="row" align="center">
+        <h2>
+            Athletics Management - Results
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    View results by athlete.
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Results By Athlete", "ResultsByAthlete", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    View results by group.
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Results By Group", "ResultsByGroup", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5">            
+            <div class="jumbotron">
+                <p align="center">
+                    View results by Event.
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Results By Event", "ResultsByEvent", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1">
+        </div>
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    View All Results.
+                </p>
+                <div align="center">
+                    @Html.ActionLink("All Results", "AllResults", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    Create new result.
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Create New Result", "Create", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    Compare Athletes.
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Compare Athletes", "ChooseAthletes", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

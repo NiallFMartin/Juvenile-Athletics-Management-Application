@@ -1,0 +1,54 @@
+﻿@model JuvenileSportsManagementApp.Models.EventVM
+
+@{
+    ViewBag.Title = "Create New Event";
+}
+
+@{ 
+    List<string> eventTypes = (List<string>)ViewData["eventTypes"];
+    List<SelectListItem> eventTypeList = new List<SelectListItem>();
+    foreach (string et in eventTypes)
+    {
+        eventTypeList.Add(new SelectListItem { Text = et, Value = et });
+    }
+}
+<p class="error">@ViewBag.ErrorMessage</p>
+
+<h2>Create New Event</h2>
+@using (Html.BeginForm())
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EventName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EventType)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>
+                    @Html.TextBoxFor(model => model.EventName)
+                    @Html.HiddenFor(model => model.EventID)
+                    @Html.HiddenFor(model => model.IsDeleted)
+                </td>
+                <td>
+                    @Html.DropDownListFor(model => model.EventType, eventTypeList)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    @Html.AntiForgeryToken()
+    <p>
+        @* Add in buttons for viewing results, etc *@
+        <input type="submit" value="Save Changes" class="btn btn-success" />
+        @Html.ActionLink("Return to Events Index", "EventsIndex", "Events", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+    </p>
+}

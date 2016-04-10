@@ -1,0 +1,2 @@
+﻿All of the .css flies were automatically generated when the base ASP.NET MVC project was created.
+I decided to use the default design provided by bootstrap after creating the project.

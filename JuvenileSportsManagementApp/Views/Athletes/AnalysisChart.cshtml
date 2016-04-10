@@ -1,0 +1,23 @@
+﻿@model JuvenileSportsManagementApp.Models.AnalyseVM
+
+@{
+    var athleteChart = new Chart(width: 600, height: 400)
+        .AddTitle("Athlete Analysis")
+        .AddSeries(chartType: "Line",
+        legend: Model.AthleteName, name: Model.AthleteName,
+        xValue: Model.ResultDates, xField: "Date",
+        yValues: Model.Results, yFields: Model.EventType)
+        .Write();
+}
+
+@Html.HiddenFor(model => model.AthleteName)
+@Html.HiddenFor(model => model.EventName)
+@Html.HiddenFor(model => model.EventType)
+@Html.HiddenFor(model => model.TotalNumResults)
+@Html.HiddenFor(model => model.TimeFrame)
+@Html.HiddenFor(model => model.AverageResult)
+@Html.HiddenFor(model => model.BestResult)
+@Html.HiddenFor(model => model.ResultDates)
+@Html.HiddenFor(model => model.Results)
+@Html.HiddenFor(model => model.TargetResult)
+@Html.HiddenFor(model => model.WorstResult)

@@ -1,0 +1,62 @@
+﻿@model List<JuvenileSportsManagementApp.Models.AthleteVM>
+
+@{
+    ViewBag.Title = "Athletics Management Portal - Athletes";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <h2>Athletes</h2>
+    
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].AthleteName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].DateOfBirth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model[0].GroupName)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => m.AthleteName)
+                        @Html.HiddenFor(model => m.AthleteID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => m.DateOfBirth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => m.GroupName)
+                        @Html.HiddenFor(model => m.GroupID)
+                        @Html.HiddenFor(model => m.IsDeleted)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { athleteID = m.AthleteID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                        @Html.ActionLink("Details", "Details", new { athleteID = m.AthleteID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                        @Html.ActionLink("Delete", "Delete", new { athleteID = m.AthleteID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-danger" })
+                        @Html.ActionLink("Analyse Athlete Results", "AnalyseIndex", new { athleteID = m.AthleteID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+<p>
+    @Html.ActionLink("Create New Athlete", "Create", "Athletes", htmlAttributes: new { @class = "btn btn-success" })
+</p>
+</body>
+</html>

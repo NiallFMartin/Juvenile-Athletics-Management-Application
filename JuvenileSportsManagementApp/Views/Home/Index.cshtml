@@ -1,0 +1,42 @@
+﻿@using JuvenileSportsManagementApp.Models
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Athletics Management Application";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10" align="center">
+                <h2>Welcome to the Athletics Manager Web Application</h2>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10" align="center">
+                @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-primary"})
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10" align="center">
+                @Html.ActionLink("Main Menu", "Portal", "Application", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+    </div>
+</body>
+</html>

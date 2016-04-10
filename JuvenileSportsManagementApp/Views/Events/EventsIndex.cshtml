@@ -1,0 +1,44 @@
+﻿@using JuvenileSportsManagementApp.Models
+
+@{
+    ViewBag.Title = "Athletics Management - Events";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <div class="row" align="center">
+        <h2>
+            Athletics Management - Events
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    View Existing Events
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Existing Events", "Events", "Events", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+            <div class="jumbotron">
+                <p align="center">
+                    Create New Event
+                </p>
+                <div align="center">
+                    @Html.ActionLink("Create New Event", "Create", "Events", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

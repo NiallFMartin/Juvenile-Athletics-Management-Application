@@ -1,0 +1,59 @@
+﻿@model List<JuvenileSportsManagementApp.Models.GroupVM>
+
+
+@{
+    ViewBag.Title = "Athletics Management - Athletes";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <h2>Athletics Management - Athletes</h2>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Group
+                </th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => m.GroupName)
+                    </td>
+                    <td>
+                        @Html.ActionLink(m.GroupName, "Athletes", "Athletes", new { groupID = m.GroupID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td>
+                    All Athletes
+                </td>
+                <td>
+                    @Html.ActionLink("All Athletes", "Athletes", "Athletes", new { groupID = -1 }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.ActionLink("Create New Athlete", "Create", "Athletes", htmlAttributes: new { @class = "btn btn-success" })
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

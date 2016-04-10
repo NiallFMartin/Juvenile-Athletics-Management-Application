@@ -1,0 +1,92 @@
+﻿@using JuvenileSportsManagementApp.Models
+@model List<JuvenileSportsManagementApp.Models.AnalyseVM>
+
+@{
+    ViewBag.Title = "Choose Athletes to Compare";
+}
+
+@{
+    List<string> eventNames = (List<string>)ViewData["eventNames"];
+    List<SelectListItem> eventList = new List<SelectListItem>();
+    foreach (string e in eventNames)
+    {
+        eventList.Add(new SelectListItem { Text = e, Value = e });
+    }
+
+    List<SelectListItem> timeList = new List<SelectListItem>();
+    timeList.Add(new SelectListItem { Text = "Results in the past week", Value = "week" });
+    timeList.Add(new SelectListItem { Text = "Results in the past month", Value = "month" });
+    timeList.Add(new SelectListItem { Text = "Results in the past year", Value = "year" });
+    timeList.Add(new SelectListItem { Text = "All Results", Value = "all" });
+
+    List<AthleteVM> athletes = (List<AthleteVM>)ViewData["athletes"];
+    List<SelectListItem> athleteList = new List<SelectListItem>();
+    foreach (AthleteVM a in athletes)
+    {
+        athleteList.Add(new SelectListItem { Text = a.AthleteName, Value = a.AthleteName });
+    }
+
+}
+
+<h2>
+    Choose Results to analyse
+</h2>
+@using (Html.BeginForm())
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Event
+                </th>
+                <th>
+                    Timeframe
+                </th>
+                <th>
+                    Athlete One
+                </th>
+                <th>
+                    Athlete Two
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DropDownListFor(model => Model[0].EventName, eventList)
+
+                </td>
+                <td>
+                    @Html.DropDownListFor(model => model[0].TimeFrame, timeList)
+                </td>
+                <td>
+                    @Html.DropDownListFor(model => Model[0].AthleteName, athleteList)
+                </td>
+                <td>
+                    @Html.DropDownListFor(model => Model[1].AthleteName, athleteList)
+
+                    
+                    @Html.HiddenFor(model => Model[0].AthleteID)
+                    @Html.HiddenFor(model => Model[0].AverageResult)
+                    @Html.HiddenFor(model => Model[0].BestResult)
+                    @Html.HiddenFor(model => Model[0].ResultDates)
+                    @Html.HiddenFor(model => Model[0].Results)
+                    @Html.HiddenFor(model => Model[0].TargetResult)
+                    @Html.HiddenFor(model => Model[0].WorstResult)
+
+                    @Html.HiddenFor(model => Model[1].AthleteID)
+                    @Html.HiddenFor(model => Model[1].AverageResult)
+                    @Html.HiddenFor(model => Model[1].BestResult)
+                    @Html.HiddenFor(model => Model[1].ResultDates)
+                    @Html.HiddenFor(model => Model[1].Results)
+                    @Html.HiddenFor(model => Model[1].TargetResult)
+                    @Html.HiddenFor(model => Model[1].WorstResult)
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <input type="submit" value="Analyse" class="btn btn-success" />
+    </p>
+}

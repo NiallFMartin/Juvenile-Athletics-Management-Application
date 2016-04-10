@@ -1,0 +1,2 @@
+﻿All the javascript files in the Scripts folder were automatically generated when I created the ASP.NET MVC base application.
+The base template application uses jquery and Bootsrap. They were automatically there when I created a new project.

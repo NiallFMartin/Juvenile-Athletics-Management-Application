@@ -1,0 +1,60 @@
+﻿@model JuvenileSportsManagementApp.Models.AthleteVM
+
+@{
+    ViewBag.Title = "Edit Athlete";
+}
+<p class="error">@ViewBag.ErrorMessage</p>
+
+<h2>Edit Athlete</h2>
+@using (Html.BeginForm())
+{
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AthleteID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AthleteName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth) (dd/mm/yyyy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GroupName) (Will change automatically with DOB)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.AthleteID)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.AthleteName)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.DateOfBirth, "{0:dd/MM/yyyy}")
+                
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.GroupName)
+                @Html.HiddenFor(model => model.DateOfBirth)
+                @Html.HiddenFor(model => model.GroupName)
+                @Html.HiddenFor(model => model.GroupID)
+                @Html.HiddenFor(model => model.IsDeleted)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+    @Html.AntiForgeryToken()
+    <p>
+        @* Add in buttons for viewing results, etc *@
+        <input type="submit" value="Save Changes" class="btn btn-success" />
+        @Html.ActionLink("Delete Athlete", "Delete", "Athletes", new { athleteID = Model.AthleteID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-danger" })
+        @Html.ActionLink("Return to Athletes Index", "AthletesIndex", "Athletes", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+    </p>
+}

@@ -1,0 +1,60 @@
+﻿@model JuvenileSportsManagementApp.Models.ResultVM
+
+@{
+    ViewBag.Title = "Result Details";
+}
+<p class="error">@ViewBag.ErrorMessage</p>
+
+<h2>Result Details</h2>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AthleteName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfResult)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.ResultID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.AthleteName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.EventName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.DateOfResult)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Result)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <p>
+        @* Add in buttons for viewing results, etc *@
+        @Html.ActionLink("Edit Result", "Edit", "Results", new { resultID = Model.ResultID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+        @Html.ActionLink("Delete result", "Delete", "Results", new { athleteID = Model.AthleteID }, htmlAttributes: new { id = "registerLink", @class = "btn btn-danger" })
+        @Html.ActionLink("Return to Results Index", "ResultsIndex", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+    </p>
+}

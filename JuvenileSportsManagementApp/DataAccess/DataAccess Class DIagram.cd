@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JuvenileSportsManagementApp.DataAccess.SportsAppContext">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\SportsAppContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.DataAccess.Services.AthleteService">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAg=</HashCode>
+      <FileName>DataAccess\Services\AthleteService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.221" />
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.DataAccess.Services.BaseService">
+    <Position X="9" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>DataAccess\Services\BaseService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.DataAccess.Services.DataAccessServiceController">
+    <Position X="2.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AASAQAEAAAAAAIAAAAAAEAAAAAAAAAAAAAAAAAAAQQA=</HashCode>
+      <FileName>DataAccess\Services\DataAccessServiceController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.DataAccess.Services.EventService">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAIAAAQAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>DataAccess\Services\EventService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.DataAccess.Services.GroupService">
+    <Position X="12" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\Services\GroupService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.DataAccess.Services.ResultService">
+    <Position X="10" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEACQAAAAAAEAAIAAAAAAAAhAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\Services\ResultService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="JuvenileSportsManagementApp.DataAccess.Services.Interfaces.IAthleteService">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAg=</HashCode>
+      <FileName>DataAccess\Services\Interfaces\IAthleteService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JuvenileSportsManagementApp.DataAccess.Services.Interfaces.IEventService">
+    <Position X="8.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAIAAAQAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>DataAccess\Services\Interfaces\IEventService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JuvenileSportsManagementApp.DataAccess.Services.Interfaces.IGroupService">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\Services\Interfaces\IGroupService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JuvenileSportsManagementApp.DataAccess.Services.Interfaces.IResultService">
+    <Position X="10" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEACQAAAAAAEAAIAAAAAAAAhAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\Services\Interfaces\IResultService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

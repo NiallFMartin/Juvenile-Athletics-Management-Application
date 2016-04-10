@@ -1,0 +1,40 @@
+﻿@model List<JuvenileSportsManagementApp.Models.AnalyseVM>
+
+@{
+    var athleteChart = new Chart(width: 600, height: 400)
+        .AddTitle("Athlete Analysis")
+        .AddSeries(chartType: "Line", name: Model[0].AthleteName,
+        xValue: Model[0].ResultDates, xField: "Date",
+        yValues: Model[0].Results, yFields: Model[0].EventType)
+        .AddSeries(chartType: "Line", name: Model[1].AthleteName,
+        xValue: Model[1].ResultDates, xField: "Date",
+        yValues: Model[1].Results, yFields: Model[1].EventType)
+        .AddLegend()
+        .Write();
+}
+
+@Html.HiddenFor(model => Model[0].AthleteID)
+@Html.HiddenFor(model => Model[0].AthleteName)
+@Html.HiddenFor(model => Model[0].EventName)
+@Html.HiddenFor(model => Model[0].EventType)
+@Html.HiddenFor(model => Model[0].TotalNumResults)
+@Html.HiddenFor(model => Model[0].TimeFrame)
+@Html.HiddenFor(model => Model[0].AverageResult)
+@Html.HiddenFor(model => Model[0].BestResult)
+@Html.HiddenFor(model => Model[0].ResultDates)
+@Html.HiddenFor(model => Model[0].Results)
+@Html.HiddenFor(model => Model[0].TargetResult)
+@Html.HiddenFor(model => Model[0].WorstResult)
+
+@Html.HiddenFor(model => Model[1].AthleteID)
+@Html.HiddenFor(model => Model[1].AthleteName)
+@Html.HiddenFor(model => Model[1].EventName)
+@Html.HiddenFor(model => Model[1].EventType)
+@Html.HiddenFor(model => Model[1].TotalNumResults)
+@Html.HiddenFor(model => Model[1].TimeFrame)
+@Html.HiddenFor(model => Model[1].AverageResult)
+@Html.HiddenFor(model => Model[1].BestResult)
+@Html.HiddenFor(model => Model[1].ResultDates)
+@Html.HiddenFor(model => Model[1].Results)
+@Html.HiddenFor(model => Model[1].TargetResult)
+@Html.HiddenFor(model => Model[1].WorstResult)

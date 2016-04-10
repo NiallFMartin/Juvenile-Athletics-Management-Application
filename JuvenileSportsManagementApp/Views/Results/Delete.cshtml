@@ -1,0 +1,60 @@
+﻿@model JuvenileSportsManagementApp.Models.ResultVM
+
+@{
+    ViewBag.Title = "Delete";
+}
+<p class="error">@ViewBag.ErrorMessage</p>
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this result?</h3>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AthleteName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfResult)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.ResultID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.AthleteName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.EventName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.DateOfResult)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Result)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        @Html.ActionLink("Return to Results Index", "ResultsIndex", "Results", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+    </p>
+}

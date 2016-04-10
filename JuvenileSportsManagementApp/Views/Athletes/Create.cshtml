@@ -1,0 +1,50 @@
+﻿@model JuvenileSportsManagementApp.Models.AthleteVM
+
+@{
+    ViewBag.Title = "Create New Athlete";
+}
+<p class="error">@ViewBag.ErrorMessage</p>
+
+<h2>Create New Athlete</h2>
+@using (Html.BeginForm())
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.AthleteName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateOfBirth) (dd/mm/yyyy)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>
+                    @Html.TextBoxFor(model => model.AthleteName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.DateOfBirth, "{0:dd/MM/yyyy}")
+
+                </td>
+                <td>
+                    @Html.HiddenFor(model => model.AthleteID)
+                    @Html.HiddenFor(model => model.GroupName)
+                    @Html.HiddenFor(model => model.GroupID)
+                    @Html.HiddenFor(model => model.IsDeleted)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    @Html.AntiForgeryToken()
+    <p>
+        @* Add in buttons for viewing results, etc *@
+        <input type="submit" value="Save Changes" class="btn btn-success" />
+        @Html.ActionLink("Return to Athletes Index", "AthletesIndex", "Athletes", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })
+    </p>
+}

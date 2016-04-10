@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="6007e757-d040-49e0-83e0-7d3abedc593c" name="Juvenile Athleteics Application" linkedPackageId="3c898474-2dab-4e04-b236-c7d9d45b4ee5" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="0c7b44a3-d357-4d14-9aeb-fa53dd96c7e3">
+      <profileInstance Id="5ad22440-bfed-4e1b-ade6-8650a1de2afb" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="af7a644b-cd95-4db3-be08-db8a2af35944">
+      <profileInstance Id="662a2c84-07ad-4232-8d1a-12b4ca2bf1aa" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="aa15bd19-e677-4392-868c-3764e1646bf7" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a1e8d26f-6f83-448b-a5ec-b870579e0360" />
+        <targetEnds>
+          <association Id="7640af0a-48f9-447a-a8f3-04b959738345" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bd48150e-0932-47aa-8b8e-0a7f50258afb" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6eff7b67-8bc6-4cbe-b807-624046531f2e" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9b15f0e2-c084-4b9e-a96c-b98c9e6e5276" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a353b33a-c58f-473e-8a2d-767c82116d6c" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="72eb84ae-7bf5-4ae3-b6c8-6dd54d4ddd8c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="495a96b1-504c-423d-8ac0-40602d5e181e" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="36191cd5-9a1f-4338-ba3d-0264412879f8" name="Database" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="623357bc-e361-45bf-b074-a3cf372fb8ff" />
+        <targetEnds>
+          <association Id="8f477de1-c2d2-46e1-a2c1-d2891eba238a" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="View Athlete Details" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="005df99c-2d72-4211-9cf8-d42fc0ce3f27" LastKnownName="View Athlete Details" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cc38ed0e-3d97-4f67-bad1-f2cc4b428ba2" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a29c79da-1318-4ddb-be5b-5a84da176d72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f4de48a9-1e54-4dec-8275-785040981016" name="View Athlete Details" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="025efaa1-957b-494a-bb06-ba063fbde327" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="90351a1a-5ed3-4925-8da0-f5df610dcfd4" />
+          </association>
+          <association Id="472f31d2-1c16-4884-b05f-188e0e57e34d" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="Delete Athlete" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a2a8c8be-cdeb-4bbf-a709-f8f490b8a51f" LastKnownName="Delete Athlete" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1218368a-7437-4180-b073-733e83924eed" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8a01f66b-1176-44bd-8dde-69097f0b64b6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c40b4007-f6ca-4f87-bfbc-418b27a090bd" name="Delete Athlete" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6c704889-c56b-4b90-9812-b1fe591a7327" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="00228723-ad57-42a7-b7ea-6c625e96d7b6" />
+          </association>
+          <association Id="42c5e241-d7cb-4c8a-b49c-ccc075f1456f" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="Analyse Athlete" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="23148155-ac7e-4e74-bf4c-9c792cfe8bbc" LastKnownName="Analyse Athlete" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="39b42c8e-9ef9-4ab3-9eaa-f40a96e58946" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3d3987eb-bc58-4f19-acc8-ba5c74d89e47" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2bdb30bf-324c-4d2f-a767-03c892088bab" name="Analyse Athlete" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f27956a3-2c2c-421d-bfd7-2a076ee1dc5b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9a45d1f1-47e3-4d31-b28b-f639afe29f50" />
+          </association>
+          <association Id="bd938fa9-f030-46c1-95c1-e2da2c79e6c8" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="Edit Athlete" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="65528e70-0efb-4965-9c22-a234846c0ab3" LastKnownName="Edit Athlete" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="90644765-a5d3-4873-a920-adafa17b5246" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fc0a50a9-30d0-4f0b-a7fc-5bc15742bd91" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a30a8e36-ee7b-4233-9e25-8946d7326b46" name="Edit Athlete" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0d04d908-ba75-4cf1-866c-d3ba22d33a8e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="89cd78f5-220d-4e9d-9c76-51cf48654680" />
+          </association>
+          <association Id="8cc1c0ae-7bd3-44f9-83d4-2f668aef4cce" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="Create Athlete" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="af3dc571-2d00-413f-95af-130d06edaadb" LastKnownName="Create Athlete" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6506a6ee-fb98-4d09-a0a6-c6204990498f" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9febd187-c50d-4dc8-af3e-10dfb2afc16e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="91d3617e-3fe1-4de3-9bfe-ea25e8ed4f2e" name="Create Athlete" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="560756f1-3df0-4288-901f-59dbd087cbdc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4c6b80b7-54ab-4020-a88c-652fe8fe0d35" />
+          </association>
+          <association Id="0e907b15-d0d9-44ba-b9fc-248de2248abc" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="View Result Details" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f0201b03-2a6b-476c-bfcc-dd3aa5a1e57b" LastKnownName="View Result Details" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="00950fd8-a0f8-4d82-aad1-fdcd2cc7b005" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7366a970-81a5-4a02-aa07-18f00cab7b05" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9fd8557b-995b-4f30-8e31-fda512aba8c9" name="View Result Details" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="67fb0d58-0c48-47d5-8a96-53f173e29935" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0abf4985-8677-407b-8681-1f3506a5500d" />
+          </association>
+          <association Id="d5e5dec3-5361-4aa2-bde0-1dac33e51206" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="Edit Result" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="26092748-b730-4f2e-aaba-fe2ea30144c0" LastKnownName="Edit Result" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb8cce6f-e862-4e7d-979f-10ca00431b7f" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bd05640d-5028-4353-b4e4-fa2bdde1b839" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="62317fba-62ee-430f-aba5-272f4ddce596" name="Edit Result" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="38e20395-7fce-4cba-98cf-6b22a8a25661" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e33f3a39-9c38-498f-8211-522bd11aae9c" />
+          </association>
+          <association Id="56f65464-eb84-47fc-b31b-0001f6e06373" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="Delete Result" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8c31442f-ea2a-4f8f-9d08-d0a641575f80" LastKnownName="Delete Result" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="56b0acd7-5190-480d-b089-db2c05f2b4c5" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="04a6352c-231e-47f4-9c64-5d8db1bceec3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="67a54f07-8bdf-4bf0-9f06-56867ad6d874" name="Delete Result" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fea81269-9f35-430a-b1dd-f0c180d5eede" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1eae6d92-0520-4afa-baef-2de313e8205b" />
+          </association>
+          <association Id="3fe36aa3-283c-495e-9f9d-82cd0ecdff25" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="Create Result" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2ed3dd4b-73ad-426c-b5dc-6da012dfcd70" LastKnownName="Create Result" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="64f22d93-d646-4976-8723-214f57d90b1f" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d8037e11-f432-4fac-a034-16f36511582e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fca17456-e8ae-4453-b8e0-abdb88931e35" name="Create Result" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b3ad2965-24ef-431f-9d47-b4d66a973f61" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0fc75e71-669e-4638-bf20-b43f50612d8e" />
+          </association>
+          <association Id="59f9c08d-120d-4239-a659-6e0bf593b8de" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="Compare Athlete Results" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1d8fda5a-8425-41e9-8515-fc28b69e4306" LastKnownName="Compare Athlete Results" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="89e3acbb-40d0-4562-a066-3a7582214310" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="765ac6d1-cb05-4380-bc80-327f19d9512e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="823c3612-72e5-47c2-93ae-94ad79fc5c21" name="Compare Athlete Results" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4eede3de-c747-4a18-996c-fa8a30de4778" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="94275177-112b-4cca-bfab-13555061103f" />
+          </association>
+          <association Id="09f7f675-bfb5-490b-911d-cbbf9d50f964" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="View Event Details" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3dbc20d8-3f7e-4297-a365-bfd49f625c9c" LastKnownName="View Event Details" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="89d16b45-242e-495e-ac1c-bdcc62e3ce07" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c3d042ed-52c4-4e68-b1c7-26e9adf9d574" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="af183ff8-8592-47d0-b56b-a6402a5cf111" name="View Event Details" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4fb78328-d412-4854-9e19-d9329f800e13" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c16bcd10-fa84-412d-bc9d-368fd16acb73" />
+          </association>
+          <association Id="145025e7-389b-456c-ab05-77136971e04d" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="Create Event" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5436f88a-ed42-48b0-aab8-f6e07def79cb" LastKnownName="Create Event" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e120f5d2-b5e2-4c99-9a45-97106f85c569" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="48d4d328-6d52-4bae-b25b-924385780b7e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="080fad45-aafd-4a49-aa01-8f3ca227afdc" name="Create Event" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3b67c4dc-b712-47a9-a4d0-f0d3e6f09220" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5e97011f-5330-4ea8-a4ea-39778c63ca70" />
+          </association>
+          <association Id="4da729e1-835b-42be-9e9c-d359c61d3889" isDerived="false" sourceEndRoleName="Database" targetEndRoleName="View Group Details" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cb270d1d-3281-4e55-88fc-245754e67de1" LastKnownName="View Group Details" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a92886d-b816-4dc1-9cdc-9beb2c1679bd" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c9626231-5514-4f15-8356-9e442c0b069f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="41634ec1-8c3b-471e-92d3-682ecaaf94ce" name="View Group Details" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b8b67297-5740-49d7-a1ea-d82a07f28058" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e1484378-ff17-42cc-9f5d-130cac0f1f30" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" name="Juvenile Athletics Application" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fd7f0e72-a026-477d-b35c-9b0b0ceb8b06" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="bd48150e-0932-47aa-8b8e-0a7f50258afb" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a0a7213b-19c0-4b6a-8bc5-0468dc8412a6" />
+        <additions>
+          <include Id="0846d49e-a030-40ea-bfd6-cb33b68c2dc4">
+            <useCaseMoniker Id="e65986b5-e2b3-42d3-8f4c-11398a7aa5f8" LastKnownName="Athletes" />
+            <elementDefinition Id="4ef4e686-a644-4858-9140-1c6a5db5134a" />
+          </include>
+          <include Id="1dd2bba5-68cc-448d-a659-b85c0e13dc4f">
+            <useCaseMoniker Id="44ad7b65-af65-44b3-8fb1-f264100f08d9" LastKnownName="Results" />
+            <elementDefinition Id="9d085ca9-5f23-425e-b2a7-d06657598f1e" />
+          </include>
+          <include Id="a613b903-6529-4013-8d68-e528e9934211">
+            <useCaseMoniker Id="043dba2f-56c9-4113-9acf-5720b4e8cd40" LastKnownName="Groups" />
+            <elementDefinition Id="e01b0d6d-c030-4d2f-a963-bad0fe76a1f0" />
+          </include>
+          <include Id="309377e8-bcbf-4b61-9bac-feb577f75677">
+            <useCaseMoniker Id="b96150ae-9ad6-4018-b2ed-75b84c24fe04" LastKnownName="Events" />
+            <elementDefinition Id="8da3e5ab-b0c7-458c-b278-28d025891311" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e65986b5-e2b3-42d3-8f4c-11398a7aa5f8" name="Athletes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="281f30ac-e0b2-4891-9a81-eb2baf282ba4" />
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="af3dc571-2d00-413f-95af-130d06edaadb" name="Create Athlete" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6cb59ddd-490e-47a0-b76a-06d494fcea11" />
+        <generalsInternal>
+          <generalization Id="8f613694-574b-455b-8605-6de865ec6023" isSubstitutable="false">
+            <useCaseMoniker Id="e65986b5-e2b3-42d3-8f4c-11398a7aa5f8" LastKnownName="Athletes" />
+            <elementDefinition Id="167bd8aa-7f7f-4d36-b93f-f9aa99d7c2a1" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="65528e70-0efb-4965-9c22-a234846c0ab3" name="Edit Athlete" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7cf1c2bf-6f14-41a2-9099-d35a42983ce2" />
+        <generalsInternal>
+          <generalization Id="0be5887f-8eff-4e42-8ece-e13c0320688b" isSubstitutable="false">
+            <useCaseMoniker Id="e65986b5-e2b3-42d3-8f4c-11398a7aa5f8" LastKnownName="Athletes" />
+            <elementDefinition Id="d8db6246-4fda-4f34-af25-dd0348b2d15a" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="005df99c-2d72-4211-9cf8-d42fc0ce3f27" name="View Athlete Details" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6903839d-64bc-420f-85cd-926456022f31" />
+        <generalsInternal>
+          <generalization Id="c87a0673-0350-4a10-82ca-285e5cae37dd" isSubstitutable="false">
+            <useCaseMoniker Id="e65986b5-e2b3-42d3-8f4c-11398a7aa5f8" LastKnownName="Athletes" />
+            <elementDefinition Id="38be3bdd-365c-479c-b9b5-0865e663cd22" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a2a8c8be-cdeb-4bbf-a709-f8f490b8a51f" name="Delete Athlete" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b69355cf-aa7b-4fc1-9f06-1fe08614d0d8" />
+        <generalsInternal>
+          <generalization Id="51c57c42-ad35-4663-8ad1-d19290e96d14" isSubstitutable="false">
+            <useCaseMoniker Id="e65986b5-e2b3-42d3-8f4c-11398a7aa5f8" LastKnownName="Athletes" />
+            <elementDefinition Id="67d61c33-0798-41a2-980f-fb7b793acb19" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="23148155-ac7e-4e74-bf4c-9c792cfe8bbc" name="Analyse Athlete" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d9db4e97-989c-4d8f-8d65-c23bc726e906" />
+        <generalsInternal>
+          <generalization Id="ca3200ce-26f4-483c-a07a-9dee2d046d13" isSubstitutable="false">
+            <useCaseMoniker Id="e65986b5-e2b3-42d3-8f4c-11398a7aa5f8" LastKnownName="Athletes" />
+            <elementDefinition Id="7bdf5150-db03-4fb1-847d-484c05a40bf4" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="44ad7b65-af65-44b3-8fb1-f264100f08d9" name="Results" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2dd2a8fa-9298-46e2-bbbc-d29bd38630e4" />
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="26092748-b730-4f2e-aaba-fe2ea30144c0" name="Edit Result" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="249ec69b-40c9-4b6a-ad24-3ea9eb1076f2" />
+        <generalsInternal>
+          <generalization Id="e064c73b-8ab6-487c-8ecb-e1ee5e167099" isSubstitutable="false">
+            <useCaseMoniker Id="44ad7b65-af65-44b3-8fb1-f264100f08d9" LastKnownName="Results" />
+            <elementDefinition Id="8e145f16-8439-45d3-aa0a-a989da8e55a7" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2ed3dd4b-73ad-426c-b5dc-6da012dfcd70" name="Create Result" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="722eeba2-c73b-4917-9d63-f4bbcad11248" />
+        <generalsInternal>
+          <generalization Id="ed8eade8-c367-46e9-8d59-fe4900ec7bb1" isSubstitutable="false">
+            <useCaseMoniker Id="44ad7b65-af65-44b3-8fb1-f264100f08d9" LastKnownName="Results" />
+            <elementDefinition Id="44ba4544-03d6-4cf6-af17-a80c26be3c38" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1d8fda5a-8425-41e9-8515-fc28b69e4306" name="Compare Athlete Results" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cdb7df87-66d5-4baf-b978-8b748b7bfea1" />
+        <generalsInternal>
+          <generalization Id="a827fc3b-68b3-41d7-95f0-e716968cc897" isSubstitutable="false">
+            <useCaseMoniker Id="44ad7b65-af65-44b3-8fb1-f264100f08d9" LastKnownName="Results" />
+            <elementDefinition Id="a72b772e-41ea-4a5a-9339-3315db8009a3" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="8c31442f-ea2a-4f8f-9d08-d0a641575f80" name="Delete Result" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4476a30b-8afe-4823-9fad-4e805d7bebc8" />
+        <generalsInternal>
+          <generalization Id="89a44a93-92da-4cdc-b65a-2056b8288826" isSubstitutable="false">
+            <useCaseMoniker Id="44ad7b65-af65-44b3-8fb1-f264100f08d9" LastKnownName="Results" />
+            <elementDefinition Id="e7a6e4d9-01d7-490c-b238-6e8b5f7227f5" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f0201b03-2a6b-476c-bfcc-dd3aa5a1e57b" name="View Result Details" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a0126312-9e72-472a-af82-05feba0433f5" />
+        <generalsInternal>
+          <generalization Id="5315129f-3d75-46ac-af05-a79e56fe1232" isSubstitutable="false">
+            <useCaseMoniker Id="44ad7b65-af65-44b3-8fb1-f264100f08d9" LastKnownName="Results" />
+            <elementDefinition Id="37bcc967-ae1b-43a7-bbb1-a8aac980a868" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="043dba2f-56c9-4113-9acf-5720b4e8cd40" name="Groups" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0d480b55-0a6d-4980-981a-30edfa088f06" />
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="cb270d1d-3281-4e55-88fc-245754e67de1" name="View Group Details" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="84d1ba1f-2c1e-465e-a87c-6d9a5fd84294" />
+        <generalsInternal>
+          <generalization Id="297ec251-15c8-40fa-9930-ba3b2085c6eb" isSubstitutable="false">
+            <useCaseMoniker Id="043dba2f-56c9-4113-9acf-5720b4e8cd40" LastKnownName="Groups" />
+            <elementDefinition Id="88d8ffc3-eec2-4b71-b98c-371e7779b17e" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b96150ae-9ad6-4018-b2ed-75b84c24fe04" name="Events" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0f35b56a-e3a7-475c-9502-9c2db955e985" />
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="3dbc20d8-3f7e-4297-a365-bfd49f625c9c" name="View Event Details" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f90766a0-cb7b-4e7d-a38c-267ae656c264" />
+        <generalsInternal>
+          <generalization Id="64452500-03b4-4da3-816b-a9e67bdd8565" isSubstitutable="false">
+            <useCaseMoniker Id="b96150ae-9ad6-4018-b2ed-75b84c24fe04" LastKnownName="Events" />
+            <elementDefinition Id="dcfa9784-4075-4cc4-bcf4-30c1f9f1dc22" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="5436f88a-ed42-48b0-aab8-f6e07def79cb" name="Create Event" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e11df5cc-7d6d-4143-b731-58ef427e6227" />
+        <generalsInternal>
+          <generalization Id="f4e78e6f-1dee-4986-b461-f39c48ef2026" isSubstitutable="false">
+            <useCaseMoniker Id="b96150ae-9ad6-4018-b2ed-75b84c24fe04" LastKnownName="Events" />
+            <elementDefinition Id="0483bd8a-ac68-488f-aac9-ac260f02f65f" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="f5e2fd9b-a98d-4afd-ad9b-717bc4720534" LastKnownName="Juvenile Athletics Application" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="3c898474-2dab-4e04-b236-c7d9d45b4ee5" name="ModelingProject">
+    <elementDefinition Id="b0921871-c7d6-41ee-befb-c34de5180aa1" />
+  </package>
+</useCaseModelRoot>

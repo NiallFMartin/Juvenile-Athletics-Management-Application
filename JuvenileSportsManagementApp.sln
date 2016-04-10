@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuvenileSportsManagementApp", "JuvenileSportsManagementApp\JuvenileSportsManagementApp.csproj", "{9994A3D8-5851-44AD-9145-1E1F50A7C412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{4C82336C-F8EF-4314-9FE4-BF4482C11CCD}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject", "ModelingProject\ModelingProject.modelproj", "{FCDE0E2B-0FBF-470A-A1A0-0C8AB0384640}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9994A3D8-5851-44AD-9145-1E1F50A7C412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9994A3D8-5851-44AD-9145-1E1F50A7C412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9994A3D8-5851-44AD-9145-1E1F50A7C412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9994A3D8-5851-44AD-9145-1E1F50A7C412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C82336C-F8EF-4314-9FE4-BF4482C11CCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C82336C-F8EF-4314-9FE4-BF4482C11CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C82336C-F8EF-4314-9FE4-BF4482C11CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C82336C-F8EF-4314-9FE4-BF4482C11CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCDE0E2B-0FBF-470A-A1A0-0C8AB0384640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCDE0E2B-0FBF-470A-A1A0-0C8AB0384640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCDE0E2B-0FBF-470A-A1A0-0C8AB0384640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCDE0E2B-0FBF-470A-A1A0-0C8AB0384640}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://niallfinalyear.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = JuvenileSportsManagementApp\\JuvenileSportsManagementApp.csproj
+		SccProjectName1 = JuvenileSportsManagementApp
+		SccLocalPath1 = JuvenileSportsManagementApp
+		SccProjectUniqueName2 = Tests\\Tests.csproj
+		SccProjectName2 = Tests
+		SccLocalPath2 = Tests
+		SccProjectUniqueName3 = ModelingProject\\ModelingProject.modelproj
+		SccProjectName3 = ModelingProject
+		SccLocalPath3 = ModelingProject
+	EndGlobalSection
+EndGlobal

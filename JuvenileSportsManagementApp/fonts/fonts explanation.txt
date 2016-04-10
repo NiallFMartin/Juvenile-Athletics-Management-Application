@@ -1,0 +1,1 @@
+﻿These font files were automatically generated when I created the base ASP.NET MVC project.

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JuvenileSportsManagementApp.Models.AnalyseVM">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAMAAAAAAAAAAAAAAAAAAwgECICAAAAIAAAAAAQAAAA=</HashCode>
+      <FileName>Models\AnalyseVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.Models.AthleteVM">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAQQAAAE=</HashCode>
+      <FileName>Models\AthleteVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.Models.EventVM">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAEAIAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\EventVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.Models.GroupVM">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAE=</HashCode>
+      <FileName>Models\GroupVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.Models.ResultVM">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICAAAAAAAAAAIAAAAAAAAAQAAIAAAAAAAAAAAQQgAAA=</HashCode>
+      <FileName>Models\ResultVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

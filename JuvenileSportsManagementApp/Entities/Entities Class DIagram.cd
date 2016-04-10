@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JuvenileSportsManagementApp.Entities.AthleteDA">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAAAAAAAAAAAAAAAAACAAQAAAAAAAAAQQAAAE=</HashCode>
+      <FileName>Entities\AthleteDA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.Entities.EventDA">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAECIAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Entities\EventDA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.Entities.GroupDA">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAE=</HashCode>
+      <FileName>Entities\GroupDA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JuvenileSportsManagementApp.Entities.ResultDA">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICAAAACAAAAAIAAAAAAAAAQAAoAAAAAAAAAAAQQgAAA=</HashCode>
+      <FileName>Entities\ResultDA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

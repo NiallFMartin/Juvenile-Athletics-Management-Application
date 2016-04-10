@@ -1,0 +1,105 @@
+﻿@model JuvenileSportsManagementApp.Models.AnalyseVM
+
+@{
+    ViewBag.Title = "Athletics Management - Athlete Analysis";
+}
+
+
+<h2 align="center">
+    Athlete Analysis for @Model.AthleteName in @Model.EventName
+</h2>
+@using (Html.BeginForm())
+{
+    <div class="row">
+
+        <div class="jumbotron" align="center">
+            <p align="center">
+                View graphical breakdown of results.
+            </p>
+            <div align="center">
+                <input type="submit" value="Analysis graph" class="btn btn-primary" />
+                @*@Html.ActionLink("View Chart Breakedown", "AnalysisChart", "Athletes", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary" })*@
+            </div>
+        </div>
+    </div>
+
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+
+                </th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center">
+                    <b>
+                        @Html.DisplayNameFor(model => model.TotalNumResults)
+                    </b>
+
+                    @Html.HiddenFor(model => model.AthleteID)
+                    @Html.HiddenFor(model => model.AthleteName)
+                    @Html.HiddenFor(model => model.EventName)
+                    @Html.HiddenFor(model => model.EventType)
+                    @Html.HiddenFor(model => model.TotalNumResults)
+                    @Html.HiddenFor(model => model.TimeFrame)
+                    @Html.HiddenFor(model => model.AverageResult)
+                    @Html.HiddenFor(model => model.BestResult)
+                    @Html.HiddenFor(model => model.ResultDates)
+                    @Html.HiddenFor(model => model.Results)
+                    @Html.HiddenFor(model => model.TargetResult)
+                    @Html.HiddenFor(model => model.WorstResult)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.TotalNumResults)
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <b>
+                        @Html.DisplayNameFor(model => model.BestResult)
+                    </b>
+
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BestResult)
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <b>
+                        @Html.DisplayNameFor(model => model.WorstResult)
+                    </b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.WorstResult)
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <b>
+                        @Html.DisplayNameFor(model => model.AverageResult)
+                    </b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.AverageResult)
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <b>
+                        @Html.DisplayNameFor(model => model.TargetResult)
+                    </b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.TargetResult)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
